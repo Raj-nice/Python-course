@@ -1,0 +1,6 @@
+print ("Hello")
+print (2*2)
+print ("Raj",3*4)
+print ("Raj"+ "98")
+print ("Hey!!", "\tRaj")
+print ("Hey!!", end= "Raj")
