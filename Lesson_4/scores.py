@@ -6,4 +6,4 @@ sub4= int(input("enter english marks "))
 sum= sub1+sub2+sub3+sub4
 print("The sum of the subjects: Math, Science, hindi, english are" , sum)
 perc= (sum/400)*100
-print( "Your average percentage is" , perc)
+print( "Your average percentage is" , perc )

@@ -7,4 +7,4 @@ t5=11
 total_inches_of_trees= t1+t2+t3+t4+t5 
 print ("The sum of all 5 trees are:", total_inches_of_trees)
 number= 5
-print ("the average of all the trees is:", total_inches_of_trees/number)
+print ("the average of all the trees is:", total_inches_of_trees/number )
