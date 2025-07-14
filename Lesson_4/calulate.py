@@ -1,4 +1,4 @@
-user=int(input("Enter the amount you want to withdraw"))
+user=int(input("Enter the amount you want to withdraw "))
 note1= user//100
 note2= (user%100)//50
 note3= ((user%100)%50)//20
