@@ -1,0 +1,5 @@
+user=(input("Enter the number which you want to square root " ))
+# print(user)
+# print(type(user))
+b=int(user)
+print("The square root of " ,user, " is " ,b**0.5)
