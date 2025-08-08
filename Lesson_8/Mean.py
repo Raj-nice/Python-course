@@ -4,6 +4,7 @@ total = 0
 for i in range(count):
     num = int(input("Enter number "))
     total += num
+    
 
 mean = total / count
-print("Mean value is" , mean)
+print("Mean value is" , mean )
