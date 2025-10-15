@@ -10,3 +10,6 @@ else:
         add += 1
 
 print ("The number of digits in the number", use , " is " , add)
+
+# for i in range(0,use,1):
+#     print (i)
