@@ -4,8 +4,8 @@ sub2= int(input("enter Science marks "))
 sub3= int(input("enter hindi marks "))
 sub4= int(input("enter english marks "))
 sub5= int(input("enter social studies marks "))
-sum= sub1+sub2+sub3+sub4+sub5
-average=sum/5
+sum= sub1+sub1+sub1+sub2+sub2+sub2+sub3+sub4+sub5+sub5
+average=sum/10 
 if 91 <= average <= 100:
     print("Your grade is A1" , average)
 elif 81 <= average <= 90:

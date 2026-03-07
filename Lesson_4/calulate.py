@@ -8,12 +8,21 @@ note6= (((((user%500)%200)%100)%50)%20)//10
 note7= ((((((user%500)%200)%100)%50)%20)%10)//5
 note8= (((((((user%500)%200)%100)%50)%20)%10)%5)//2
 note9= ((((((((user%500)%200)%100)%50)%20)%10)%5)%2)//1
-print("notes of 500 rupee" , note1)
-print("notes of 200 rupee" , note2)
-print("notes of 100 rupee" , note3)
-print("notes of 50 rupee" , note4)
-print("notes of 20 rupee" , note5)
-print("notes of 10 rupee" , note6)
-print("coins of 5 rupee" , note7)
-print("coins of 2 rupee" , note8)
-print("coins of 1 rupee" , note9)
+if note1 != 0:
+    print("notes of 500 rupee" , note1)
+if note2 != 0:
+    print("notes of 200 rupee" , note2)
+if note3 != 0:
+    print("notes of 100 rupee" , note3)
+if note4 != 0:
+    print("notes of 50 rupee" , note4)
+if note5 != 0:
+    print("notes of 20 rupee" , note5)
+if note6 != 0:
+    print("notes of 10 rupee" , note6)
+if note7 != 0:
+    print("coins of 5 rupee" , note7)
+if note8 != 0:
+    print("coins of 2 rupee" , note8)
+if note9 != 0:
+    print("coins of 1 rupee" , note9)
