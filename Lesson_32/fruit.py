@@ -26,5 +26,5 @@ class FruitQuiz:
                 break
 
     print("Welcome to fruit quiz: ")
-    fq = FruitQuiz()
-    fq.quiz()
+fq = FruitQuiz()
+fq.quiz()
