@@ -10,7 +10,7 @@ ENEMY_START_Y_MIN = 50
 ENEMY_START_Y_MAX = 150
 ENEMY_SPEED_X = 4
 ENEMY_SPEED_Y = 40
-BULLET_SPEED_Y = 10
+BULLET_SPEED_Y = 100
 COLLISION_DISTANCE = 27
 
 pygame.init()
@@ -21,7 +21,8 @@ background = pygame.image.load("background.png")
 pygame.display.set_caption("Space Invader")
 
 
-player = pygame.image.load("player.png")
+playerImg = pygame.image.load("spaceship.png")
+playerImg = pygame.transform.scale(playerImg,(50, 50))
 playerX = PLAYER_START_X
 playerY = PLAYER_START_Y
 playerX_change = 0
@@ -34,13 +35,16 @@ enemyY_change = []
 num_of_enemies = 6
 
 for i in range(num_of_enemies):
-    enemyImg.append(pygame.image.load('enemy.png'))
+    e = pygame.image.load("monster.png")
+    e = pygame.transform.scale(e,(30, 30))
+    enemyImg.append(e)
     enemyX.append(random.randint(0, SCREEN_WIDTH - 64))  # 64 is the size of the enemy
     enemyY.append(random.randint(ENEMY_START_Y_MIN, ENEMY_START_Y_MAX))
     enemyX_change.append(ENEMY_SPEED_X)
     enemyY_change.append(ENEMY_SPEED_Y)
 
 bulletImg = pygame.image.load('bullet.png')
+bulletImg = pygame.transform.scale(bulletImg, (50, 50))
 bulletX = 0
 bulletY = PLAYER_START_Y
 bulletX_change = 0
@@ -86,6 +90,7 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 playerX_change = -5
             if event.key == pygame.K_RIGHT:
@@ -97,7 +102,7 @@ while running:
             playerX_change = 0
 
         playerX += playerX_change
-        playerX = max(0, min(playerX, SCREEN_WIDTH- 64))
+        playerX = max(0, min(playerX, SCREEN_WIDTH - 64))
 
         for i in range(num_of_enemies):
             if enemyY[i] > 340:
@@ -112,6 +117,7 @@ while running:
                 enemyY[i] += enemyY_change[i]
 
             if isCollision(enemyX[i], enemyY[i], bulletX, bulletY):
+                bulletY = PLAYER_START_Y
                 bullet_state = "ready"
                 score_value += 1
                 enemyX[i] = random.randint(0, SCREEN_WIDTH - 64)
@@ -129,6 +135,6 @@ while running:
 
         player(playerX, playerY)
         show_score(textX,textY)
-        pygame.display.update
+        pygame.display.update()
 
 
